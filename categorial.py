@@ -13,3 +13,4 @@ X=dfc.values # масив numpy
 # кодування неперервних ознак в категоріальні (біннінг)
 bins = np.linspace(0, 10, 6)
 x1c = np.digitize(x1, bins=bins) # повертає індекси бінів
+print x1c

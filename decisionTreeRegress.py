@@ -15,3 +15,4 @@ f = StringIO()
 export_graphviz(model, out_file=f)
 print f.getvalue()
 path=model.decision_path([[5]]).toarray()
+print path

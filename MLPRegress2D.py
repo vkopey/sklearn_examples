@@ -7,7 +7,7 @@ x = np.array([[0,1,2,0,1,2,0,1,2],
 y = np.array([0,1,2,1,2,3,2,3,9])
 x=x.T
 
-# 1 скритий шар
+# 1 скритий шар розміром 1
 model= MLPRegressor(solver='lbfgs', alpha=0, hidden_layer_sizes=[1], activation='tanh')
 model.fit(x, y)
 print model.intercepts_ # вільні члени

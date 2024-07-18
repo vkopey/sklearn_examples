@@ -8,7 +8,7 @@ x = np.array([8,0,3,4,9,7,1,6,3,9])
 y = np.array([9,0,2,6,9,8,2,9,4,9])
 x=x[:, None]
 
-# поліном 2 степні з вільним членом
+# поліном степні 2 з вільним членом
 poly = PolynomialFeatures(degree=2)
 x_poly = poly.fit_transform(x)
 poly.get_feature_names()

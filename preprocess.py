@@ -11,7 +11,7 @@ S+=[MinMaxScaler()] # масштабує в діапазоні 0..1
 S+=[StandardScaler()] # середнє 0, дисперсія 1
 S+=[RobustScaler()] # те саме що StandardScaler, але ігнорує викиди
 for scaler in S:
-    scaler.fit(x) # отримати модель для маштабування
+    scaler.fit(x) # отримати модель для маcштабування
     x_scaled=scaler.transform(x) # масштабувати
     print x_scaled
     print scaler.inverse_transform(x_scaled) # зворотне перетворення

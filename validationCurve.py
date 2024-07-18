@@ -14,7 +14,7 @@ x = 10*np.random.random((30, 1))
 y = 0.2*x**2+1 + 2*np.random.normal(size=x.shape)
 plt.scatter(x, y)
 plt.xlabel('x'), plt.ylabel('y')
-plt.show()
+plt.show(); plt.figure()
 
 # будуємо криві перевірки
 model = make_pipeline(PolynomialFeatures(), LinearRegression())
@@ -23,7 +23,7 @@ train_scores, test_scores = validation_curve(model, x, y, 'polynomialfeatures__d
 plt.plot(degree, np.mean(train_scores, 1), 'o-') # оцінка навчання
 plt.plot(degree, np.mean(test_scores, 1), 'o--') # оцінка перевірки
 plt.xlabel('degree'),plt.ylabel('score')
-plt.show()
+plt.show(); plt.figure()
 
 # будуємо криві навчання для моделі degree=2
 model = make_pipeline(PolynomialFeatures(degree=2), LinearRegression())

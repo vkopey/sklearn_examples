@@ -13,10 +13,10 @@ x=x.T
 # рисуємо матрицю діаграм розсіювання
 import pandas as pd
 df=pd.DataFrame(x, columns=[0,1])
-pd.scatter_matrix(df, c=y, figsize=(5, 5), hist_kwds={'bins': 5})
-plt.show()
+pd.plotting.scatter_matrix(df, c=y, figsize=(5, 5), hist_kwds={'bins': 5})
+plt.show(); plt.figure()
 
-model=LogisticRegression(C=100) # лінійний классифікатор
+model=LogisticRegression(C=100) # лінійний класифікатор
 model.fit(x,y)
 b=model.intercept_ # вільний член
 a=model.coef_ # коефіцієнти

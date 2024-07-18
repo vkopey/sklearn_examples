@@ -5,7 +5,7 @@ from sklearn.neural_network import MLPRegressor
 x = np.array([8,0,3,4,9,7,1,6,3,9])[:, None]
 y = np.array([9,0,2,6,9,8,2,9,4,9])
 
-# 1 скритий шар
+# 1 скритий шар розміром 1
 model= MLPRegressor(solver='lbfgs', alpha=0, hidden_layer_sizes=[1], activation='tanh')
 model.fit(x, y)
 print model.intercepts_# вільні члени
@@ -16,7 +16,7 @@ Y=model.predict(x)
 h1=np.tanh(-2.73092729+0.75195748*x)
 Yf=4.85558639+4.00237182*h1 
 
-# 2 скриті шари
+# 1 скритий шар розміром 2
 model= MLPRegressor(solver='lbfgs', alpha=0, hidden_layer_sizes=[2], activation='tanh')
 model.fit(x, y)
 print model.intercepts_

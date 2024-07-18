@@ -32,11 +32,11 @@ print a,b
 
 from mpl_toolkits.mplot3d import axes3d
 fig = plt.figure() # створити фігуру
-ax = fig.add_subplot(111, projection='3d') # добавити графік 3D
+ax = fig.add_subplot(111, projection='3d') # додати графік 3D
 Y=model.predict(x) 
 Y=Y.reshape(X[0].shape)
 ax.scatter(x[:,0], x[:,1], y) # показати емпіричні точки
-ax.plot_wireframe(X[0], X[1], Y, rstride=1, cstride=1) # показати теор поверхню
+ax.plot_wireframe(X[0], X[1], Y, rstride=1, cstride=1) # показати теоретичну поверхню
 ax.set_xlabel('X0'),ax.set_ylabel('X1'),ax.set_zlabel('Y')
 plt.show()
 
