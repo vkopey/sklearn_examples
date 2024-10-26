@@ -11,3 +11,5 @@
 
 Установлення scikit-learn версії 0.19.2:
 >pip install scikit-learn==0.19.2
+
+[Відеоуроки на YouTube](https://youtube.com/playlist?list=PLWQeyw8evOHj76bwKaegjhuxKTqpEeHc7&si=3IgDK61QlXy-cnLn)
